@@ -1,0 +1,10 @@
+Package: Derivada
+Version: 1.0-1
+Section: base
+Priority: optional
+Architecture: i386
+Depends: libAlgMath (>= 1.0.0)
+Maintainer: João Paulo Bispo Alves <joao.alves@eldorado.com>
+Description: Derivada
+ Esse programa serve para realizar a operação de derivadas
+ com polinômios.

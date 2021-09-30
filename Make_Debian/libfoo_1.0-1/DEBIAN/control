@@ -1,0 +1,9 @@
+Package: libfoo
+Version: 1.0-1
+Section: base
+Priority: optional
+Architecture: i386
+Depends:
+Maintainer: João Paulo <joaopaulobispo27@gmail.com>
+Description: libfoo
+ Biblioteca compartilhada teste

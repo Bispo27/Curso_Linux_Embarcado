@@ -1,0 +1,9 @@
+Package: libAlgMath
+Version: 1.0-1
+Section: base
+Priority: optional
+Architecture: i386
+Depends: 
+Maintainer: João Paulo Bispo Alves <joao.alves@eldorado.com>
+Description: libAlgMath
+ Biblioteca que possui funções matemáticas

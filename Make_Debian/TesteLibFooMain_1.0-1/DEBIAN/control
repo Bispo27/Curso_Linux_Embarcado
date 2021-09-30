@@ -1,0 +1,9 @@
+Package: TesteLibFooMain
+Version: 1.0-1
+Section: base
+Priority: optional
+Architecture: i386
+Depends: libfoo
+Maintainer: João Paulo <joaopaulobispo27@gmail.com>
+Description: TesteLibFooMain
+ Teste de uma biblioteca compartilhada

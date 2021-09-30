@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "algmath.h": "c",
+        "complex.h": "c",
+        "math.h": "c"
+    }
+}

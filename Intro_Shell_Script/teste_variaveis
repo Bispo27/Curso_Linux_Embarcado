@@ -1,0 +1,43 @@
+#!/bin/bash
+nome="Script que revert bits"
+echo "$nome"
+
+
+echo "Digite o número de bits da variável que você quer reserver"
+echo "1 - 8 bits"
+echo "2 - 16 bits"
+echo "3 - 32 bits"
+echo "4 - 64 bits"
+read var
+case $var in
+	"1")
+		echo "Digite a variável: "
+		read X
+		
+		echo "binário inserido: $X"
+		printf '%b\n' $X
+		echo "Xbin = $X"
+		X = $[$[$[$X & 0xAA] >> 1] | $[1 << $[ $X & 0x55]]]
+		X = $[$[$[$X & 0xCC] >> 1] | $[1 << $[ $X & 0x33]]]
+		#X = $[$[$[$X & 0xAA] >> 1] | $[1 << $[ $X & 0x55]]]
+		
+		echo "binário revertido: $X"
+		
+		;;
+esac
+
+
+#echo "Digite o valor de a";
+#read a;
+#echo "Digite o valor de b";
+#read b;
+#c=$[$a*$b]
+
+#if [ $c -gt 100 ];
+#then
+#	echo "a + b = $c"
+#	echo "o resultado é maior que 100"
+#else
+#	echo "a + b = $c"
+#	echo "O resultado é menor que 100"
+#fi
