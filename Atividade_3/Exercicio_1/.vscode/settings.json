@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "unistd.h": "c",
+        "tcp_lib.h": "c"
+    }
+}

@@ -23,7 +23,9 @@ void main(char *path, char *argv[]) {
 			sleep(5);
 			exit(1);
 		} else { 
-			signal(SIGCHLD, child_handler);
+			signal(SIGCHLD, child_handler); /* System call que deixa a task pai em wait até que o filho termine de 								    executar e returna "exit"
+							    O primeiro filho que retornar o exit, ativa o signal
+							  */
 			printf("Parent PID: %d - Fork return: %d\n", getpid(), ret);
 			while(1) { }
 		}

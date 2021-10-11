@@ -9,8 +9,7 @@ progponto.o: progponto.c
 	gcc -c progponto.c
 
 ponto.o: ponto.c
-	gcc -c ponto.c
-
+	gcc -c ponto.
 clean: 
 	rm -rf *.o
 

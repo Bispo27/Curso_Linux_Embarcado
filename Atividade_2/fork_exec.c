@@ -13,7 +13,7 @@ void main (int argc, char * argv[]) {
 	} else {
 		if (ret == 0) { 
 			printf("Child PID: %d - Fork return: %d\n", getpid(), ret); 
-			execv(binaryPath, args);
+			execv(binaryPath, args); // Eu coloco o processo filho para executar a função do arquivo "binaryPath"
 		} else { 
 			printf("Parent PID: %d - Fork return: %d\n", getpid(), ret);
 		}
