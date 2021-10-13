@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "unistd.h": "c",
-        "tcp_lib.h": "c"
+        "tcp_lib.h": "c",
+        "in.h": "c"
     }
 }
