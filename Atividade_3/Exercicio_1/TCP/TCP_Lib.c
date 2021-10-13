@@ -37,6 +37,10 @@ void TCP_Init_Server(TCP_Handle_Typedef_Server * TCP){
 
 }
 
+void TCP_Close_Socket_Server(TCP_Handle_Typedef_Server * TCP){
+    close(TCP->ns);
+}
+
 void TCP_Close_Server(TCP_Handle_Typedef_Server * TCP){
 /* Fecha o socket conectado ao cliente */
     close(TCP->ns);
@@ -73,6 +77,10 @@ void TCP_Open_Server(TCP_Handle_Typedef_Server * TCP){
      * Aceita uma conexao e cria um novo socket atraves do qual
      * ocorrera a comunicacao com o cliente.
      */
+
+}
+
+void Accept(TCP_Handle_Typedef_Server * TCP){
     TCP->namelen = sizeof(TCP->client);
     if ((TCP->ns = accept(TCP->s, (struct sockaddr *)&(TCP->client), (socklen_t *)&(TCP->namelen))) == -1)
     {
@@ -104,7 +112,7 @@ void TCP_RecvMsg_Server(TCP_Handle_Typedef_Server * TCP){
         perror("Recv()");
         exit(6);
     }
-    printf("%s\n", TCP->recvbuf);
+    //printf("%s\n", TCP->recvbuf);
 
 }
 

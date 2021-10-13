@@ -25,6 +25,10 @@ typedef struct{
     CMD = 0x00, START, STOP, SYNC
 };
 
+void Accept(TCP_Handle_Typedef_Server * TCP);
+
+void TCP_Close_Socket_Server(TCP_Handle_Typedef_Server * TCP);
+
 void TCP_Init_Server(TCP_Handle_Typedef_Server * TCP);
 
 void TCP_SendMsg_Server(TCP_Handle_Typedef_Server * TCP, uint8_t * buff, uint16_t size);

@@ -10,7 +10,6 @@ int main(int argc, char *argv[])
 
     printf("Iniciando o Cliente...\n\n");
     TCP_Init_Client(&newTCPClient);
-    printf("Abrindo conexão...\n");
     TCP_Open_Client(&newTCPClient);
     char msg[100];
     while(1){
