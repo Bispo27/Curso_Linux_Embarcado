@@ -33,7 +33,7 @@ void TCP_Init_Server(TCP_Handle_Typedef_Server * TCP);
 
 void TCP_SendMsg_Server(TCP_Handle_Typedef_Server * TCP, uint8_t * buff, uint16_t size);
 
-void TCP_RecvMsg_Server(TCP_Handle_Typedef_Server * TCP);
+int TCP_RecvMsg_Server(TCP_Handle_Typedef_Server * TCP);
 
 void TCP_Open_Server(TCP_Handle_Typedef_Server * TCP);
 
@@ -43,7 +43,7 @@ void TCP_Init_Client(TCP_Handle_Typedef_Client * TCP);
 
 void TCP_SendMsg_Client(TCP_Handle_Typedef_Client * TCP, uint8_t * buff, uint16_t size);
 
-void TCP_RecvMsg_Client(TCP_Handle_Typedef_Client * TCP);
+void TCP_RecvMsg_Client(TCP_Handle_Typedef_Client * TCP, int print);
 
 void TCP_Open_Client(TCP_Handle_Typedef_Client * TCP);
 

@@ -2,6 +2,7 @@
     "files.associations": {
         "unistd.h": "c",
         "tcp_lib.h": "c",
-        "in.h": "c"
+        "in.h": "c",
+        "pthread.h": "c"
     }
 }

@@ -7,6 +7,7 @@
 #include <string.h>
 #include <netdb.h>
 #include "TCP_Lib.h"
+#include <pthread.h>
 
 
 
@@ -105,15 +106,16 @@ void TCP_SendMsg_Server(TCP_Handle_Typedef_Server * TCP, uint8_t * buff, uint16_
 
 
 
-void TCP_RecvMsg_Server(TCP_Handle_Typedef_Server * TCP){
+int TCP_RecvMsg_Server(TCP_Handle_Typedef_Server * TCP){
     /* Recebe uma mensagem do cliente atraves do novo socket conectado */
     if (recv(TCP->ns, TCP->recvbuf, sizeof(TCP->recvbuf), 0) == -1)
     {
         perror("Recv()");
+        return -1;
         exit(6);
     }
     //printf("%s\n", TCP->recvbuf);
-
+    return 0;
 }
 
 
@@ -166,14 +168,15 @@ void TCP_Open_Client(TCP_Handle_Typedef_Client * TCP){
     printf("%s\n", TCP->sendbuf);
 }
 
-void TCP_RecvMsg_Client(TCP_Handle_Typedef_Client * TCP){
+void TCP_RecvMsg_Client(TCP_Handle_Typedef_Client * TCP, int print){
 /* Recebe a mensagem do servidor no buffer de recepcao */
     if (recv(TCP->s, TCP->recvbuf, sizeof(TCP->recvbuf), 0) < 0)
     {
         perror("Recv()");
         exit(6);
     }
-    printf("%s\n", TCP->recvbuf);
+    if(print == 1)
+        printf("%s\n", TCP->recvbuf);
 }
 
 void TCP_Close_Client(TCP_Handle_Typedef_Client * TCP){
